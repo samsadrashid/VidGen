@@ -167,6 +167,13 @@ Off by default; VidGen never needs it. `skill/scripts/external.mjs --plan` shows
 
 Design: agent-agnostic (shell + Node + ffmpeg), local-first (external context only with per-transfer authorization), authentic UI only, modular scripts so new stages slot in.
 
+## Use responsibly
+
+- Record only apps and accounts you own or are authorized to record. VidGen captures whatever URL the storyboard names.
+- Screens captured behind a login can contain real personal data. Redaction is selector-based, not automatic: review the contact sheets from `/video-review` before sharing a video.
+- Narration is synthesized speech; captions, titles and claims in a video are yours to check. VidGen never invents screens, but it renders the text you give it.
+- Provided as-is under the MIT License, without warranty (see below).
+
 ## License
 
 MIT — see [LICENSE](LICENSE). Kokoro-82M (optional voice) is Apache-2.0 and downloaded separately.
