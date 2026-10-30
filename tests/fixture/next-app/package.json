@@ -1,0 +1,2 @@
+{ "name": "vidgen-next-fixture", "private": true, "scripts": { "dev": "next dev -p ${PORT:-3000}" },
+  "dependencies": { "next": "14.2.15", "react": "18.3.1", "react-dom": "18.3.1" } }

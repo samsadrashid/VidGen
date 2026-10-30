@@ -1,0 +1,10 @@
+{
+  "name": "vidgen-skill",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "description": "VidGen — From Codebase to Cinematic Product Videos",
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright": "1.48.2" }
+}

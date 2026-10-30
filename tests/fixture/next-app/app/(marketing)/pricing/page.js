@@ -1,0 +1,1 @@
+export default function Pricing() { return <><h1>Pricing</h1><div style={{ display: 'flex', gap: 16 }}>{['Free', 'Pro $20', 'Team $99'].map((p) => <div key={p} style={{ background: '#fff', padding: 24, borderRadius: 12 }}>{p}</div>)}</div></>; }

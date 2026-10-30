@@ -1,0 +1,39 @@
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: macos
+    # VidGen v1 supports macOS only.
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install ffmpeg
+        run: brew install ffmpeg
+
+      - name: Install skill deps + Chromium
+        working-directory: skill
+        run: |
+          npm install --no-fund --no-audit --loglevel=error
+          npx playwright install chromium
+
+      - name: Doctor
+        run: node skill/scripts/doctor.mjs
+
+      # Every offline suite sequentially + smoke demo (1920x1080 + 1080x1920); exits non-zero on any failure.
+      # Kokoro tests skip here (no model installed); `say` covers voiceover.
+      - name: Test suites + smoke
+        run: node tests/all.mjs
+
+      # No artifact uploads: job logs carry the diagnostics; captures/exports/session state never leave the runner.

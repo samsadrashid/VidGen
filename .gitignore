@@ -1,0 +1,20 @@
+node_modules/
+.vidgen/
+vidgen-export/
+.DS_Store
+# Never commit auth/session material (VidGen keeps sessions in memory; these guard user-made files)
+*.storageState.json
+storage-state*.json
+.auth/
+playwright/.auth/
+.vidgen-auth/
+captures.staging-*/
+# Local environment files (never part of the skill)
+.env
+.env.*
+!.env.example
+!.env.sample
+# Local test logs (node tests/all.mjs with VIDGEN_TEST_LOGS)
+.test-logs/
+samples/
+.tts/
