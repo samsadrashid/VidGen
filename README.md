@@ -4,6 +4,12 @@
 
 Installable agent skill that reads an existing project, finds its key user journeys, captures the *real* running UI, and renders promo videos — always in both **1920×1080** and **1080×1920**.
 
+![Demo: the same storyboard rendered as 1920×1080 and 1080×1920](docs/media/demo.gif)
+
+*One real screen of the test fixture app, dressed in each ready look (`/video-plan` shows you this strip before you choose):*
+
+![Looks: Noir Glide, Porcelain Keynote, Mint Noir, Soft Calm](docs/media/looks.png)
+
 ## Install
 
 **Supported platform: macOS only** (tested on macOS 26, Apple silicon). Linux and Windows are not supported in v1; the installer refuses them.
