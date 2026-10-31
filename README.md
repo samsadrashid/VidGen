@@ -1,6 +1,8 @@
-# VidGen
+<p align="center"><img src="docs/media/logo.png" width="160" alt="VidGen"></p>
 
-**From Codebase to Cinematic Product Videos.**
+<h1 align="center">VidGen</h1>
+
+<p align="center"><strong>From Codebase to Cinematic Product Videos.</strong></p>
 
 Installable agent skill that reads an existing project, finds its key user journeys, captures the *real* running UI, and renders promo videos — always in both **1920×1080** and **1080×1920**.
 
